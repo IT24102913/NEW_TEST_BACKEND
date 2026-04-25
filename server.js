@@ -20,6 +20,12 @@ const itemRoutes = require("./routes/itemRoutes");
 // Use routes
 app.use("/api/items", itemRoutes);
 
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Item Manager API is running!' });
+});
+
+
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
 
